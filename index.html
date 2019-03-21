@@ -50,7 +50,8 @@
 
 		function loadImages(){
 			var uri = document.querySelector('input[type=text]').value;
-			var id = /youtu.+(\/|=)(.+)$/.exec(uri)[2];
+			//var id = /youtu.+(\/|=)(.+)$/.exec(uri)[2];
+			var id = /(?:youtube(?:-nocookie)?\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/.exec(uri)[1];
 			
 			var formRes = document.forms[0];
 			var res = "";
